@@ -1,46 +1,81 @@
 body {
 	background: #999;
 	font-family: arial;
+	text-align: center;
+}
+
+head {
+	text-align: center;
 }
 
 p {
+	margin: 25px auto;
+	border-radius: 25px;
+	text-align: center;
+	padding: 10px;
+	width: 66%;
 	background: #666;
 	color: #222;
-	padding: 10px;
+}
+
+#canvasId {
+	border-radius: 14px;
 }
 
 #toRightSideButton {
 	background: #333;
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 #toIsometricButton {
 	background: #333;
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 #toFrontButton {
 	background: #333;
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 #toInsideButton {
 	background: #333;
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 #showExplodedAssemblyButton {
 	background: #333;
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 #showDimensionsButton {
 	background: rgb(130, 45, 29);
 	color: white;
 	padding: 10px;
+	border-radius: 10px;
+}
+
+#firstRowButtons {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 44%;
+	background: #666;
+}
+
+#secondRowButtons {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 44%;
+	background: #666;
 }
