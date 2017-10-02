@@ -1,0 +1,46 @@
+body {
+	background: #999;
+	font-family: arial;
+}
+
+p {
+	background: #666;
+	color: #222;
+	padding: 10px;
+}
+
+#toRightSideButton {
+	background: #333;
+	color: white;
+	padding: 10px;
+}
+
+#toIsometricButton {
+	background: #333;
+	color: white;
+	padding: 10px;
+}
+
+#toFrontButton {
+	background: #333;
+	color: white;
+	padding: 10px;
+}
+
+#toInsideButton {
+	background: #333;
+	color: white;
+	padding: 10px;
+}
+
+#showExplodedAssemblyButton {
+	background: #333;
+	color: white;
+	padding: 10px;
+}
+
+#showDimensionsButton {
+	background: rgb(130, 45, 29);
+	color: white;
+	padding: 10px;
+}
