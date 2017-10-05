@@ -7,6 +7,7 @@ body {
 head {
 	text-align: center;
 	text-decoration-style: courier;
+	color: #111;
 }
 
 h1 {
@@ -118,6 +119,15 @@ a {
 
 @media screen and (max-width: 720px) {
 
+	a {
+		font-size: 11px;
+		margin: 3px auto;
+	}
+
+	p {
+		margin: 2px auto;
+	}
+
 	#canvasContainer {
 		height: 300px;
 		background: blue;
@@ -135,15 +145,6 @@ a {
 	#secondRowButtons {
 		display: inline-block;
 		width: 33%;
-	}
-
-	a {
-		font-size: 11px;
-		margin: 2px auto;
-	}
-
-	p {
-		margin: 2px auto;
 	}
 
 }
