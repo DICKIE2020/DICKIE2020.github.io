@@ -134,7 +134,7 @@ a {
 	background: #666;
 	}
 
-#secondRowButtons {
+	#secondRowButtons {
 	border-radius: 14%;
 	text-align: center;
 	padding-top: 0px;
@@ -146,5 +146,10 @@ a {
 }
 
 @media screen and (max-width: 720px) {
-	
+
+	#canvasContainer {
+	height: 300px;
+	background: red;
+	}
+
 }
