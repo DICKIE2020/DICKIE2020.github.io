@@ -56,8 +56,12 @@ a {
 	height: 95%;
 }
 
-#canvasContainer {
+#currentViewDisplay {
 	margin-top: 111px;
+	font-weight: bold;
+	background: #ffffff;
+	font-size: 21px;
+	padding: 0px;
 }
 
 #notes {
@@ -116,7 +120,7 @@ a {
 
 #showDimensionsButton {
 	background: #666;
-	color: #888;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
