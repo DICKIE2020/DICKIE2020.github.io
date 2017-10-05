@@ -79,25 +79,25 @@
 			//THE "RIGHT-SIDE" BUTTON'S "ON-CLICK" FUNCTION
 			toRightSideButton.onclick = function() {
 				if(currentState == "ISOMETRIC" && currentlyTransitioning == false) {
-					timer11K = setInterval(transition11K, 1000/10);
+					timer11K = setInterval(transition11K, 1000/7);
 					currentState = "RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "FRONT" && currentlyTransitioning == false) {
-					timer28BB = setInterval(transition28BB, 1000/10);
+					timer28BB = setInterval(transition28BB, 1000/7);
 					currentState = "RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED FRONT" && currentlyTransitioning == false) {
-					timer17Q = setInterval(transition17Q, 1000/10);
+					timer17Q = setInterval(transition17Q, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED ISOMETRIC" && currentlyTransitioning == false) {
-					timer25Y = setInterval(transition25Y, 1000/10);
+					timer25Y = setInterval(transition25Y, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
@@ -106,25 +106,25 @@
 			//THE ISOMETRIC BUTTON'S "ON-CLICK" FUNCTION
 			toIsometricButton.onclick = function() {
 				if(currentState == "RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer12L = setInterval(transition12L, 1000/10);
+					timer12L = setInterval(transition12L, 1000/7);
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "FRONT" && currentlyTransitioning == false) {
-					timer3C = setInterval(transition3C, 1000/10);
+					timer3C = setInterval(transition3C, 1000/7);
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED FRONT" && currentlyTransitioning == false) {
-					timer6F = setInterval(transition6F, 1000/10);
+					timer6F = setInterval(transition6F, 1000/7);
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer26Z = setInterval(transition26Z, 1000/10);
+					timer26Z = setInterval(transition26Z, 1000/7);
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
@@ -133,25 +133,25 @@
 			//THE FRONT BUTTON'S "ON-CLICK" FUNCTION
 			toFrontButton.onclick = function() {
 				if(currentState == "ISOMETRIC" && currentlyTransitioning == false) {
-					timer4D = setInterval(transition4D, 1000/10);
+					timer4D = setInterval(transition4D, 1000/7);
 					currentState = "FRONT";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer27AA = setInterval(transition27AA, 1000/10);
+					timer27AA = setInterval(transition27AA, 1000/7);
 					currentState = "FRONT";
 					currentFrame = 28;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED ISOMETRIC" && currentlyTransitioning == false) {
-					timer5E = setInterval(transition5E, 1000/10);
+					timer5E = setInterval(transition5E, 1000/7);
 					currentState = "EXPLODED FRONT";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer18R = setInterval(transition18R, 1000/10);
+					timer18R = setInterval(transition18R, 1000/7);
 					currentState = "EXPLODED FRONT";
 					currentFrame = 28;
 					currentlyTransitioning = true;
@@ -160,25 +160,25 @@
 			//THE EXPLODE/ASSEMBLE BUTTON'S FUNCTION
 			showExplodedAssemblyButton.onclick = function() {
 				if(currentState == "ISOMETRIC" && currentlyTransitioning == false) {
-					timer7G = setInterval(transition7G, 1000/10);
+					timer7G = setInterval(transition7G, 1000/7);
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED ISOMETRIC" && currentlyTransitioning == false) {
-					timer8H = setInterval(transition8H, 1000/10);
+					timer8H = setInterval(transition8H, 1000/7);
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer15O = setInterval(transition15O, 1000/10);
+					timer15O = setInterval(transition15O, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer16P = setInterval(transition16P, 1000/10);
+					timer16P = setInterval(transition16P, 1000/7);
 					currentState = "RIGHT-SIDE";
 					currentFrame = 28;
 					currentlyTransitioning = true;
@@ -187,13 +187,13 @@
 			//THE INSIDE BUTTON'S "ON-CLICK" FUNCTION
 			toInsideButton.onclick = function() {
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
-					timer19S = setInterval(transition19S, 1000/10);
+					timer19S = setInterval(transition19S, 1000/7);
 					currentState = "INSIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
 				};
 				if(currentState == "INSIDE" && currentlyTransitioning == false) {
-					timer20T = setInterval(transition20T, 1000/10);
+					timer20T = setInterval(transition20T, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 28;
 					currentlyTransitioning = true;
