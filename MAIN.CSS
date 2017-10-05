@@ -152,4 +152,8 @@ a {
 	background: red;
 	}
 
+	#canvasId {
+	border-radius: 3px;
+}
+
 }
