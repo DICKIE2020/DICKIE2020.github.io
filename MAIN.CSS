@@ -21,7 +21,7 @@ p {
 	padding: 10px;
 	width: 66%;
 	background: #666;
-	color: #222;
+	color: white;
 	font-family: Courier;
 }
 
@@ -107,40 +107,11 @@ a {
 @media screen and (max-width: 960px) {
 
 	p {
-	margin: 14px auto;
-	border-radius: 14px;
-	text-align: center;
-	padding: 10px;
 	width: 88%;
-	background: #666;
-	color: #222;
-	font-family: Courier;
 	}
 
 	a {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: inline-block;
-	font-family: Courier;
-	font-size: 11px;
-	}
-
-	#firstRowButtons {
-	border-radius: 14%;
-	text-align: center;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	width: 77%;
-	background: #666;
-	}
-
-	#secondRowButtons {
-	border-radius: 14%;
-	text-align: center;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	width: 77%;
-	background: #666;
+	font-size: 14px;
 	}
 
 }
@@ -153,7 +124,16 @@ a {
 	}
 
 	#canvasId {
-	border-radius: 7%;
-}
+	border-radius: 3px;
+	}
+
+	a {
+	font-size: 11px;
+	margin: 3px auto;
+	}
+
+	p {
+	margin: 3px auto;
+	}
 
 }
