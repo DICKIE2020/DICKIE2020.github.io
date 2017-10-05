@@ -172,14 +172,13 @@ a {
 
 	#canvasContainer {
 		height: 250px;
-		width: 95%;
+		width: 94%;
 	}
 
 	#canvasId {
 		border-radius: 3px;
-		margin: auto;
+		margin-top: 4px;
 		width: 98%;
-		height: 98%;
 	}
 
 	#firstRowButtons {
