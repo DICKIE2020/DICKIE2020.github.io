@@ -130,11 +130,13 @@ a {
 	}
 
 	p {
+		font-size: 7px;
 		margin: 2px auto;
 	}
 
 	#canvasContainer {
 		height: 250px;
+		width: 95%;
 	}
 
 	#canvasId {
