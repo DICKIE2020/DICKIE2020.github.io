@@ -84,7 +84,15 @@
 			image11.src = '0375-0402_SPRITESHEET(ARRAY)11.jpg';
 			image12.src = '0375-0402_SPRITESHEET(ARRAY)12.jpg';
 			image13.src = '0375-0402_SPRITESHEET(ARRAY)13.jpg';
+			//CONVERT THE CURRENTVIEWDISPLAY OBJECT INTO A JQUERY OBJECT
 			currentViewDisplayObject = $("#currentViewDisplay");
+			//CONVERT EACH OF THE BUTTON OBJECTS INTO A JQUERY OBJECTS
+			rightSideButton = $("#toRightSideButton");
+			frontButton = $("#toFrontButton");
+			isometricButton = $("#toIsometricButton");
+			insideButton = $("#toInsideButton");
+			assembleExplodeButton = $("#showExplodedAssemblyButton");
+			dimensionsButton = $("#showDimensionsButton");
 			//DEFINE THE PRELOADER FUNCTION
 			function preloader() {
 				if(windowLoaded == false) {
@@ -128,12 +136,14 @@
 					currentState = "RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "FRONT" && currentlyTransitioning == false) {
 					timer28BB = setInterval(transition28BB, 1000/7);
 					currentState = "RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED FRONT" && currentlyTransitioning == false) {
 					timer17Q = setInterval(transition17Q, 1000/7);
@@ -146,6 +156,7 @@
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 			};
 			//THE ISOMETRIC BUTTON'S "ON-CLICK" FUNCTION
@@ -155,24 +166,28 @@
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "FRONT" && currentlyTransitioning == false) {
 					timer3C = setInterval(transition3C, 1000/7);
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED FRONT" && currentlyTransitioning == false) {
 					timer6F = setInterval(transition6F, 1000/7);
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
 					timer26Z = setInterval(transition26Z, 1000/7);
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 			};
 			//THE FRONT BUTTON'S "ON-CLICK" FUNCTION
@@ -182,24 +197,28 @@
 					currentState = "FRONT";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "RIGHT-SIDE" && currentlyTransitioning == false) {
 					timer27AA = setInterval(transition27AA, 1000/7);
 					currentState = "FRONT";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED ISOMETRIC" && currentlyTransitioning == false) {
 					timer5E = setInterval(transition5E, 1000/7);
 					currentState = "EXPLODED FRONT";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
 					timer18R = setInterval(transition18R, 1000/7);
 					currentState = "EXPLODED FRONT";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 			};
 			//THE EXPLODE/ASSEMBLE BUTTON'S FUNCTION
@@ -209,24 +228,28 @@
 					currentState = "EXPLODED ISOMETRIC";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED ISOMETRIC" && currentlyTransitioning == false) {
 					timer8H = setInterval(transition8H, 1000/7);
 					currentState = "ISOMETRIC";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "RIGHT-SIDE" && currentlyTransitioning == false) {
 					timer15O = setInterval(transition15O, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "EXPLODED RIGHT-SIDE" && currentlyTransitioning == false) {
 					timer16P = setInterval(transition16P, 1000/7);
 					currentState = "RIGHT-SIDE";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 			}
 			//THE INSIDE BUTTON'S "ON-CLICK" FUNCTION
@@ -236,12 +259,14 @@
 					currentState = "INSIDE";
 					currentFrame = 1;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 				if(currentState == "INSIDE" && currentlyTransitioning == false) {
 					timer20T = setInterval(transition20T, 1000/7);
 					currentState = "EXPLODED RIGHT-SIDE";
 					currentFrame = 28;
 					currentlyTransitioning = true;
+					currentViewDisplayObject.text("CURRENT VIEW: TRANSITIONING");
 				};
 			};
 			//THE DIMENSION BUTTON'S "ON-CLICK" FUNCTION
@@ -304,7 +329,15 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image4, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer1A); currentlyTransitioning = false;}
+				} else { clearInterval(timer1A); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "#999", background: "#666"});
+						 insideButton.css({color: "#999", background: "#666"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.text("HIDE DIMENSIONS");
+						 }
 			};
 			function transition2B() {
 				if(currentFrame > 1) {
@@ -315,7 +348,15 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image4, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer2B); currentlyTransitioning = false;}
+				} else { clearInterval(timer2B); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");
+						 rightSideButton.css({color: "white", background: "#1d428a"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "white", background: "#1d428a"});
+						 insideButton.css({color: "#999", background: "#666"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.text("SHOW DIMENSIONS");
+						}
 			};
 			function transition5E() {
 				if(currentFrame < 28) {
@@ -326,7 +367,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image6, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer5E); currentlyTransitioning = false;}
+				} else { clearInterval(timer5E); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			function transition6F() {
 				if(currentFrame > 1) {
@@ -337,7 +378,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image6, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer6F); currentlyTransitioning = false;}
+				} else { clearInterval(timer6F); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (EXPLODED)");}
 			};
 			function transition7G() {
 				if(currentFrame < 28) {
@@ -348,7 +389,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image5, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer7G); currentlyTransitioning = false;}
+				} else { clearInterval(timer7G); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (EXPLODED)");}
 			};
 			function transition8H() {
 				if(currentFrame > 1) {
@@ -359,7 +400,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image5, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer8H); currentlyTransitioning = false;}
+				} else { clearInterval(timer8H); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (ASSEMBLED)");}
 			};
 			function transition11K() {
 				if(currentFrame < 28) {
@@ -370,7 +411,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer11K); currentlyTransitioning = false;}
+				} else { clearInterval(timer11K); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");}
 			};
 			function transition12L() {
 				if(currentFrame > 1) {
@@ -381,7 +422,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer12L); currentlyTransitioning = false;}
+				}  else { clearInterval(timer12L); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (ASSEMBLED)");}
 			};
 			function transition15O() {
 				if(currentFrame < 28) {
@@ -392,7 +433,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image7, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer15O); currentlyTransitioning = false;}
+				}  else { clearInterval(timer15O); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
 			};
 			function transition16P() {
 				if(currentFrame > 1) {
@@ -403,7 +444,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image7, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer16P); currentlyTransitioning = false;}
+				}  else { clearInterval(timer16P); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");}
 			};
 			function transition17Q() {
 				if(currentFrame < 28) {
@@ -414,7 +455,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image9, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer17Q); currentlyTransitioning = false;}
+				}  else { clearInterval(timer17Q); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
 			};
 			function transition18R() {
 				if(currentFrame > 1) {
@@ -425,7 +466,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image9, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer18R); currentlyTransitioning = false;}
+				}  else { clearInterval(timer18R); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			function transition19S() {
 				if(currentFrame < 28) {
@@ -436,7 +477,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image8, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer19S); currentlyTransitioning = false;}
+				}  else { clearInterval(timer19S); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
 			};
 			function transition20T() {
 				if(currentFrame > 1) {
@@ -447,7 +488,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image8, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer20T); currentlyTransitioning = false;}
+				}  else { clearInterval(timer20T); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
 			};
 			function transition21U() {
 				if(currentFrame < 2) {
@@ -458,7 +499,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image10, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer21U); currentlyTransitioning = false;}
+				} else { clearInterval(timer21U); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
 			};
 			function transition22V() {
 				if(currentFrame > 1) {
@@ -469,7 +510,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image10, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer22V); currentlyTransitioning = false;}
+				} else { clearInterval(timer22V); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
 			};
 			function transition23W() {
 				if(currentFrame < 2) {
@@ -480,7 +521,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image12, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer23W); currentlyTransitioning = false;}
+				} else { clearInterval(timer23W); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
 			};
 			function transition24X() {
 				if(currentFrame > 1) {
@@ -491,7 +532,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image12, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer24X); currentlyTransitioning = false;}
+				} else { clearInterval(timer24X); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
 			};
 			function transition25Y() {
 				if(currentFrame < 28) {
@@ -502,7 +543,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image11, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer25Y); currentlyTransitioning = false;}
+				}  else { clearInterval(timer25Y); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
 			};
 			function transition26Z() {
 				if(currentFrame > 1) {
@@ -513,7 +554,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image11, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer26Z); currentlyTransitioning = false;}
+				}  else { clearInterval(timer26Z); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (EXPLODED)");}
 			};
 			function transition4D() {
 				if(currentFrame < 28) {
@@ -524,7 +565,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image2, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer4D); currentlyTransitioning = false;}
+				}  else { clearInterval(timer4D); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			function transition3C() {
 				if(currentFrame > 1) {
@@ -535,7 +576,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image2, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer3C); currentlyTransitioning = false;}
+				}  else { clearInterval(timer3C); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (ASSEMBLED)");}
 			};
 			function transition28BB() {
 				if(currentFrame < 28) {
@@ -546,7 +587,7 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image3, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer28BB); currentlyTransitioning = false;}
+				}  else { clearInterval(timer28BB); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");}
 			};
 			function transition27AA() {
 				if(currentFrame > 1) {
@@ -557,7 +598,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image3, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer27AA); currentlyTransitioning = false;}
+				}  else { clearInterval(timer27AA); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			function transition29CC() {
 				if(currentFrame < 2) {
@@ -568,7 +609,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer29CC); currentlyTransitioning = false;}
+				} else { clearInterval(timer29CC); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			function transition30DD() {
 				if(currentFrame > 1) {
@@ -579,7 +620,7 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer30DD); currentlyTransitioning = false;}
+				} else { clearInterval(timer30DD); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
 			
 		</script>
