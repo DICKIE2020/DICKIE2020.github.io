@@ -17,7 +17,7 @@
 			USE THE NAVIGATION BUTTONS TO VIEW THE ASSEMBLY DIAGRAM. <br> DIMENSIONS CAN BE APPLIED TO ALL VIEWS EXCEPT FOR THE ISOMETRIC VIEWS AND THE EXPLODED RIGHT-SIDE VIEW.
 		</p>
 		<p id="currentViewDisplay">
-			CURRENT VIEW: ISOMETRIC ASSEMBLED
+			PLEASE WAIT
 		</p>
 		<p id="canvasContainer">
 			<canvas id="canvasId" width="960" height="540" style="border:4px solid black"></canvas>
@@ -53,6 +53,7 @@
 			var currentState = "ISOMETRIC";
 			var currentlyTransitioning = false;
 			var windowLoaded = false;
+			var loadingMessageCounter = 1;
 			//GRAB THE HTML CANVAS ELEMENT FROM THE DOM. THEN STORE THE CANVAS OBJECT AND CANVAS CONTEXT IN VARIABLES
 			var canvas = document.getElementById("canvasId");
 			var context = canvas.getContext("2d");
@@ -84,9 +85,40 @@
 			image12.src = '0375-0402_SPRITESHEET(ARRAY)12.jpg';
 			image13.src = '0375-0402_SPRITESHEET(ARRAY)13.jpg';
 			currentViewDisplayObject = $("#currentViewDisplay");
+			//DEFINE THE PRELOADER FUNCTION
+			function preloader() {
+				if(windowLoaded == false) {
+					preloaderTimer = setInterval(changeCurrentViewDisplay, 1000);
+				};
+			};
+			//DEFINE THE CHANGE CURRENTVIEWDISPLAY FUNCTION
+			function changeCurrentViewDisplay() {
+				switch (loadingMessageCounter) {
+					case 1:
+						currentViewDisplayObject.text("LOADING 3D MODEL.");
+						loadingMessageCounter++;
+						break;
+					case 2:
+						currentViewDisplayObject.text("LOADING 3D MODEL..");
+						loadingMessageCounter++;
+						break;
+					case 3:
+						currentViewDisplayObject.text("LOADING 3D MODEL...");
+						loadingMessageCounter++;
+						break;
+					case 4:
+						currentViewDisplayObject.text("PLEASE WAIT");
+						loadingMessageCounter = 1;
+						break;
+				};
+			};
+			//CALL THE PRELOAD FUNCTION
+			preloader();
 			//ONCE THE SPRITESHEET IS LOADED, DRAW THE FIRST IMAGE AND BEGIN LOADING THE JSON DATA
 			window.onload = function() {
 				windowLoaded = true;
+				clearInterval(preloaderTimer);
+				currentViewDisplayObject.text("CURRENT VIEW: ISOMETRIC (ASSEMBLED)");
 				context.drawImage(image, 0, 0);
 			};
 			//THE "RIGHT-SIDE" BUTTON'S "ON-CLICK" FUNCTION
