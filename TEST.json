@@ -10,7 +10,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "2.png",
+	"filename": "TEST.png",
 	"frame": {"x":960,"y":0,"w":960,"h":540},
 	"rotated": false,
 	"trimmed": false,
@@ -25,6 +25,6 @@
 	"format": "RGBA8888",
 	"size": {"w":1920,"h":540},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:4ee1e95483801ce89c0a16fb39c6ce65:59947250750c8b57686b1d86405a70ab:bca207a5758a70ad659ed8ab7f3387f8$"
+	"smartupdate": "$TexturePacker:SmartUpdate:977199602edde59ae8f8134f2d92e5e5:0b4bdbdc8572d74fc32329a0eca54cb6:bca207a5758a70ad659ed8ab7f3387f8$"
 }
 }
