@@ -515,7 +515,14 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image9, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer17Q); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
+				}  else { clearInterval(timer17Q); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "white", background: "#1d428a"});
+						 isometricButton.css({color: "white", background: "#1d428a"});
+						 insideButton.css({color: "white", background: "#1d428a"});
+						 assembleExplodeButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.css({color: "#999", background: "#666"});
+						}
 			};
 			function transition18R() {
 				if(currentFrame > 1) {
@@ -526,7 +533,14 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image9, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer18R); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
+				}  else { clearInterval(timer18R); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");
+						 rightSideButton.css({color: "white", background: "#1d428a"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "white", background: "#1d428a"});
+						 insideButton.css({color: "#999", background: "#666"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						}
 			};
 			function transition19S() {
 				if(currentFrame < 28) {
@@ -537,7 +551,15 @@
 						targetY = jsonData.frames[targetFrame].frame.y;
 						context.drawImage(image8, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer19S); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");}
+				}  else { clearInterval(timer19S); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: GEARS");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "#999", background: "#666"});
+						 insideButton.css({color: "white", background: "#1d428a"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						 insideButton.text("VIEW FROM OUTSIDE");
+						}
 			};
 			function transition20T() {
 				if(currentFrame > 1) {
@@ -548,7 +570,15 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image8, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				}  else { clearInterval(timer20T); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");}
+				}  else { clearInterval(timer20T); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (EXPLODED)");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "white", background: "#1d428a"});
+						 isometricButton.css({color: "white", background: "#1d428a"});
+						 insideButton.css({color: "white", background: "#1d428a"});
+						 assembleExplodeButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.css({color: "#999", background: "#666"});
+						 insideButton.text("VIEW FROM INSIDE");
+			}
 			};
 			function transition21U() {
 				if(currentFrame < 2) {
@@ -559,7 +589,15 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image10, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer21U); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");}
+				} else { clearInterval(timer21U); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "#999", background: "#666"});
+						 insideButton.css({color: "#999", background: "#666"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.text("HIDE DIMENSIONS");
+						}
 			};
 			function transition22V() {
 				if(currentFrame > 1) {
@@ -570,7 +608,15 @@
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
 						context.drawImage(image10, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
-				} else { clearInterval(timer22V); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");}
+				} else { clearInterval(timer22V); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: RIGHT-SIDE (ASSEMBLED)");
+						 rightSideButton.css({color: "#999", background: "#666"});
+						 frontButton.css({color: "#999", background: "#666"});
+						 isometricButton.css({color: "#999", background: "#666"});
+						 insideButton.css({color: "white", background: "#1d428a"});
+						 assembleExplodeButton.css({color: "#999", background: "#666"});
+						 dimensionsButton.css({color: "white", background: "#1d428a"});
+						 dimensionsButton.text("SHOW DIMENSIONS");
+						}
 			};
 			function transition23W() {
 				if(currentFrame < 2) {
