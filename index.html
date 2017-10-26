@@ -609,7 +609,7 @@
 					$.getJSON("TEST.json", function(jsonData) {
 						targetX = jsonData.frames[targetFrame - 1].frame.x;
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
-						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
+						context.drawImage(testImage, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
 				} else { clearInterval(timer29CC); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
@@ -620,7 +620,7 @@
 					$.getJSON("TEST.json", function(jsonData) {
 						targetX = jsonData.frames[targetFrame - 1].frame.x;
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
-						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
+						context.drawImage(testImage, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
 				} else { clearInterval(timer30DD); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
