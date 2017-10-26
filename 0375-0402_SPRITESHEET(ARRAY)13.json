@@ -21,10 +21,10 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "TEST.png",
+	"image": "0375-0402_SPRITESHEET(ARRAY)13.png",
 	"format": "RGBA8888",
 	"size": {"w":1920,"h":540},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:977199602edde59ae8f8134f2d92e5e5:0b4bdbdc8572d74fc32329a0eca54cb6:bca207a5758a70ad659ed8ab7f3387f8$"
+	"smartupdate": "$TexturePacker:SmartUpdate:c1e8c2146ebe42655d19a4494497f768:0b4bdbdc8572d74fc32329a0eca54cb6:7936cc4399f6bc615b8156f7365406af$"
 }
 }
