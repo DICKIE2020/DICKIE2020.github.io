@@ -84,36 +84,36 @@ a {
 }
 
 #toRightSideButton {
-	background: #1d428a;
-	color: white;
+	background: #666;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
 
 #toIsometricButton {
-	background: #1d428a;
-	color: white;
+	background: #666;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
 
 #toFrontButton {
-	background: #1d428a;
-	color: white;
+	background: #666;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
 
 #toInsideButton {
-	background: #1d428a;
-	color: white;
+	background: #666;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
 
 #showExplodedAssemblyButton {
-	background: #1d428a;
-	color: white;
+	background: #666;
+	color: #999;
 	padding: 7px;
 	border-radius: 10px;
 }
