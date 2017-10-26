@@ -75,7 +75,7 @@
 			image.src = '0375-0402_SPRITESHEET(ARRAY).jpg';
 			image2.src = '0375-0402_SPRITESHEET(ARRAY)2.jpg';
 			image3.src = '0375-0402_SPRITESHEET(ARRAY)3.jpg';
-			image4.src = '0375-0402_SPRITESHEET(ARRAY)4.jpg';
+			image4.src = '0375-0402_SPRITESHEET(ARRAY)4.png';
 			image5.src = '0375-0402_SPRITESHEET(ARRAY)5.jpg';
 			image6.src = '0375-0402_SPRITESHEET(ARRAY)6.jpg';
 			image7.src = '0375-0402_SPRITESHEET(ARRAY)7.jpg';
@@ -606,10 +606,10 @@
 				if(currentFrame < 2) {
 					targetFrame = currentFrame + 1;
 					currentFrame++;
-					$.getJSON("TEST.json", function(jsonData) {
+					$.getJSON("0375-0402_SPRITESHEET(ARRAY)13.json", function(jsonData) {
 						targetX = jsonData.frames[targetFrame - 1].frame.x;
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
-						context.drawImage(testImage, targetX, targetY, 960, 540, 0, 0, 960, 540);
+						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
 				} else { clearInterval(timer29CC); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
@@ -617,10 +617,10 @@
 				if(currentFrame > 1) {
 					targetFrame = currentFrame - 1;
 					currentFrame--;
-					$.getJSON("TEST.json", function(jsonData) {
+					$.getJSON("0375-0402_SPRITESHEET(ARRAY)13.json", function(jsonData) {
 						targetX = jsonData.frames[targetFrame - 1].frame.x;
 						targetY = jsonData.frames[targetFrame - 1].frame.y;
-						context.drawImage(testImage, targetX, targetY, 960, 540, 0, 0, 960, 540);
+						context.drawImage(image13, targetX, targetY, 960, 540, 0, 0, 960, 540);
 					});
 				} else { clearInterval(timer30DD); currentlyTransitioning = false; currentViewDisplayObject.text("CURRENT VIEW: FRONT");}
 			};
